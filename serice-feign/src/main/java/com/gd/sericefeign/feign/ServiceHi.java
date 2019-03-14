@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * @email https://github.com/guodong94
  * @date 2019/2/20 21:39
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi",fallback = ServiceHiImpl.class)
 @Component
 public interface ServiceHi {
 
