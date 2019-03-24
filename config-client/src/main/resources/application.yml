@@ -1,6 +1,5 @@
-
 server:
-  port: 8881
+  port: 8882
 
 spring:
   application:
@@ -13,11 +12,34 @@ spring:
       discovery:
         enabled: true
         serviceId: config-server
+#bus
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+#rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+#发送post请求：http://localhost:8881/actuator/bus-refresh，你会发现config-client会重新读取配置文件
+#另外，/actuator/bus-refresh接口可以指定服务，即使用"destination"参数，比如 “/actuator/bus-refresh?destination=customers:**” 即刷新服务名为customers的所有服务。
+
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8100/eureka/
+
 
 
 

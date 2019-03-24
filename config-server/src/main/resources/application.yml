@@ -4,13 +4,13 @@ server:
 spring:
   application:
     name: config-server
-#spring.cloud.config≈‰÷√
+#spring.cloud.config
   cloud:
     config:
       server:
         label: master
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
+          uri: https://github.com/guodong94/SpringcloudConfig
           searchPaths: respo
           username:
           password:
