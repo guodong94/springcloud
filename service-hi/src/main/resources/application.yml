@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: service-hi
+#zipkin服务追踪分析  https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
+#在spring Cloud为F版本的时候，已经不需要自己构建Zipkin Server了，只需要下载jar启动即可
+  zipkin:
+    base-url: http://localhost:9411
 
 eureka:
   client:
