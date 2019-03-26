@@ -16,4 +16,4 @@ springcloud版本为Greenwich.SR1
 9. 断路器监控(Hystrix Dashboard)
 10. 断路器聚合监控(Hystrix Turbine)
 
-学习参考：https://blog.csdn.net/forezp/article/category/6830968/2?
+学习参考：https://blog.csdn.net/forezp/article/category/6830968/2
