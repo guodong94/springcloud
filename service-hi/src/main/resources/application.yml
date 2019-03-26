@@ -14,3 +14,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8100/eureka/
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
